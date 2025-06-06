@@ -86,7 +86,7 @@ anio,mes,sector,Produccion
 2020,enero,Confeccionista,168608
 2020,febrero,Confeccionista,276862
 2020,marzo,Confeccionista,149332
-2020,abril,Confeccionista,0
+2020,abril,Confeccionista,270749
 2020,mayo,Confeccionista,80992
 2020,junio,Confeccionista,163654
 2020,julio,Confeccionista,232293
@@ -233,7 +233,7 @@ anio,mes,sector,Produccion
 2020,enero,Electronica,564258
 2020,febrero,Electronica,759914
 2020,marzo,Electronica,440186
-2020,abril,Electronica,0
+2020,abril,Electronica,841821
 2020,mayo,Electronica,310987
 2020,junio,Electronica,792215
 2020,julio,Electronica,1131857
@@ -380,7 +380,7 @@ anio,mes,sector,Produccion
 2020,enero,Otros,8589
 2020,febrero,Otros,7884
 2020,marzo,Otros,5400
-2020,abril,Otros,0
+2020,abril,Otros,58716
 2020,mayo,Otros,2184
 2020,junio,Otros,5124
 2020,julio,Otros,8856
@@ -559,7 +559,7 @@ anio,mes,sector,Produccion
 2022,septiembre,Pesquera,190618
 2022,octubre,Pesquera,192234
 2022,noviembre,Pesquera,278634
-2022,diciembre,Pesquera,0
+2022,diciembre,Pesquera,329514
 2023,enero,Pesquera,455631
 2023,febrero,Pesquera,820804
 2023,marzo,Pesquera,111496
@@ -567,7 +567,7 @@ anio,mes,sector,Produccion
 2023,mayo,Pesquera,629728
 2023,junio,Pesquera,503241
 2023,julio,Pesquera,426511
-2023,agosto,Pesquera,0
+2023,agosto,Pesquera,772639
 2023,septiembre,Pesquera,13803
 2023,octubre,Pesquera,390136
 2023,noviembre,Pesquera,335344
@@ -578,7 +578,7 @@ anio,mes,sector,Produccion
 2024,abril,Pesquera,184588
 2024,mayo,Pesquera,379493
 2024,junio,Pesquera,434017
-2024,julio,Pesquera,0
+2024,julio,Pesquera,858039
 2024,agosto,Pesquera,252885
 2024,septiembre,Pesquera,441286
 2024,octubre,Pesquera,441286
@@ -820,7 +820,7 @@ anio,mes,sector,Produccion
 2020,enero,Textil,1221121
 2020,febrero,Textil,1796964
 2020,marzo,Textil,1155162
-2020,abril,Textil,0
+2020,abril,Textil,1881599
 2020,mayo,Textil,491542
 2020,junio,Textil,1576215
 2020,julio,Textil,1841171

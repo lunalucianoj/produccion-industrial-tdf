@@ -1385,12 +1385,12 @@ anio,mes,sector,Produccion,empleados,establecimientos
 2020,marzo,Pesquera,1206789.0,465,3
 2020,marzo,Plastica,10764049.0,692,7
 2020,marzo,Textil,1155162.0,637,8
-2020,abril,Confeccionista,0.0,210,5
-2020,abril,Electronica,0.0,5223,23
-2020,abril,Otros,0.0,303,2
+2020,abril,Confeccionista,270749.0,210,5
+2020,abril,Electronica,841821.0,5223,23
+2020,abril,Otros,58716.0,303,2
 2020,abril,Pesquera,1284353.0,480,3
 2020,abril,Plastica,10061129.0,712,7
-2020,abril,Textil,0.0,624,8
+2020,abril,Textil,1881599.0,624,8
 2020,mayo,Confeccionista,80992.0,224,5
 2020,mayo,Electronica,310987.0,6150,23
 2020,mayo,Otros,2184.0,346,2
@@ -1580,7 +1580,7 @@ anio,mes,sector,Produccion,empleados,establecimientos
 2022,diciembre,Confeccionista,174207.0,270,5
 2022,diciembre,Electronica,1219116.0,8146,20
 2022,diciembre,Otros,9935.0,333,1
-2022,diciembre,Pesquera,0.0,204,3
+2022,diciembre,Pesquera,329514.0,204,3
 2022,diciembre,Plastica,9189222.0,705,7
 2022,diciembre,Textil,964152.0,640,8
 2023,enero,Confeccionista,223046.0,297,5
@@ -1628,7 +1628,7 @@ anio,mes,sector,Produccion,empleados,establecimientos
 2023,agosto,Confeccionista,470383.0,300,4
 2023,agosto,Electronica,1531782.0,9407,18
 2023,agosto,Otros,16260.0,579,1
-2023,agosto,Pesquera,0.0,201,3
+2023,agosto,Pesquera,772639.0,201,3
 2023,agosto,Plastica,15129559.0,710,7
 2023,agosto,Textil,1255704.0,592,8
 2023,septiembre,Confeccionista,420900.0,299,4
@@ -1694,7 +1694,7 @@ anio,mes,sector,Produccion,empleados,establecimientos
 2024,julio,Confeccionista,256050.0,247,4
 2024,julio,Electronica,952209.0,6305,17
 2024,julio,Otros,10536.0,395,1
-2024,julio,Pesquera,0.0,192,2
+2024,julio,Pesquera,858039.0,192,2
 2024,julio,Plastica,10934814.0,617,7
 2024,julio,Textil,1124297.0,440,6
 2024,agosto,Confeccionista,261809.0,245,4
