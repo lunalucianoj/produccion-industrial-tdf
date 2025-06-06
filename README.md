@@ -103,14 +103,29 @@ El dataset consolidado resultante contiene las siguientes variables:
 | `anio`           | int64        | Año del registro (2001 a 2025) |
 | `mes`            | object       | Mes del registro (en minúsculas, e.g., `"enero"`) |
 | `sector`         | object       | Sector industrial (e.g., `"Textiles"`, `"Pesqueras"`) |
-| `Produccion`     | float64      | Producción total mensual del sector (en unidades, según sector) |
+| `Produccion`     | int32      | Producción total mensual del sector (en unidades, según sector) |
 | `empleados`      | int32        | Cantidad de empleados del sector ese mes |
 | `establecimientos` | int32      | Cantidad de establecimientos industriales activos ese mes |
 
-El dataset final tiene por el momento 1746 filas y 6 columnas: `anio`, `mes`, `sector`, `Produccion`, `empleados`, `establecimientos`.
+El dataset final tiene por el momento 881 filas y 6 columnas: `anio`, `mes`, `sector`, `Produccion`, `empleados`, `establecimientos`.
 Los tipos de datos fueron cuidadosamente transformados para garantizar compatibilidad con modelos de regresión y visualizaciones.
 
 ---
+## Estructura de los Datasets Procesados
+
+Tras la limpieza, unificación y validación de los tres datasets originales, se generaron los siguientes conjuntos de datos finales:
+
+| Archivo CSV | Descripción |
+|-------------|-------------|
+| `produccion_total_por_sector_v2.csv` | Producción mensual por sector, normalizada y transformada |
+| `empleados_total_por_sector_v2.csv` | Empleo mensual por sector, normalizado |
+| `establecimientos_total_por_sector_v2.csv` | Cantidad de establecimientos activos por sector |
+| `dataset_unificado_industria_v2.csv` | Unificación completa de los tres datasets, incluyendo valores nulos en producción antes de 2013 |
+| `dataset_test_real.csv` | Registros sin datos de producción, reservados como casos reales para predicción |
+| `dataset_final.csv` | Dataset final para entrenamiento supervisado, con registros completos de 2013 a 2025 |
+
+El archivo `dataset_final.csv` será utilizado para entrenar y evaluar modelos de regresión supervisada.  
+El archivo `dataset_test_real.csv` contiene observaciones sin valores de producción y se utilizará para realizar predicciones con el modelo una vez entrenado.
 
 
 
@@ -142,7 +157,7 @@ Los tipos de datos fueron cuidadosamente transformados para garantizar compatibi
 
 4. **Exportación de datos:**
    - Cada dataframe intermedio fue exportado a la carpeta `data/processed/`.
-   - El dataset unificado se utilizó como base para la modelización en futuras entregas.
+   - A partir del dataset unificado, se separaron los registros sin producción (df_test) y se generó el dataset final (df_final) con información completa, que será utilizado para el entrenamiento de modelos supervisados.
 
 
 
