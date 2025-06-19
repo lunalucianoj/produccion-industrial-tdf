@@ -263,6 +263,23 @@ Este paso permite validar el modelo como herramienta útil para simular datos hi
 
 ---
 
+### Herramientas utilizadas a lo largo del parcial:
+
+- Pandas y Numpy para manipulación de datos
+- Matplotlib y Seaborn para visualización
+- Jupyter Notebook para análisis exploratorio
+- Git y GitHub para control de versiones
+- Cookiecutter para estructuración del proyecto
+- VisualStudioCode que me permitio generar los codigos y sincronizarlos al repositorio
+- Scikit-learn para entrenamiento de modelos
+
+
+
+
+
+
+
+
 Video de la presentacion: https://drive.google.com/file/d/1mJ7Z6DJiWXOG1Dt-Qofn9I6lF5zAXLNi/view?usp=sharing
 Video v2: https://drive.google.com/file/d/1AtPa3-AmeWu9ryD6q7B92KL3ENhYQXC6/view?usp=sharing
 
@@ -270,6 +287,9 @@ Aclaro que para que no sea tan extenso el video me tome el atrevimiento de acele
 Disculpen las molestias, muchas gracias.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 Project Organization
 ------------
