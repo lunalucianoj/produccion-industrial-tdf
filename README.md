@@ -159,6 +159,110 @@ El archivo `dataset_test_real.csv` contiene observaciones sin valores de producc
    - Cada dataframe intermedio fue exportado a la carpeta `data/processed/`.
    - A partir del dataset unificado, se separaron los registros sin producción (df_test) y se generó el dataset final (df_final) con información completa, que será utilizado para el entrenamiento de modelos supervisados.
 
+------------
+
+---
+
+## Tercera Entrega: Presentación del Modelo y Análisis de Resultados
+
+**Descripción:** Esta sección documenta el modelo final aplicado, el análisis exploratorio y la evaluación de resultados según lo solicitado en la entrega 3.
+
+---
+
+### Origen de los datos (resumen)
+
+- Fuente: Instituto Provincial de Estadísticas y Censos (IPEC) – Tierra del Fuego AeIAS.
+- Fecha de descarga: 13/05/2025.
+- Archivos originales disponibles en `data/raw/`.
+- Se combinaron 3 fuentes: producción, empleados y establecimientos industriales.
+
+---
+
+### Análisis exploratorio relevante
+
+- Se separaron los sectores según la unidad de medida reportada: unidades o kilogramos.
+- Se descartaron sectores con comportamiento errático o no explicable por variables estructurales:
+  - **Otros** fue excluido del análisis en unidades.
+  - **Plástica** fue excluido del análisis en kilogramos.
+- Se detectaron correlaciones sólidas entre producción, empleo y establecimientos en los sectores **Electrónica**, **Confeccionista**, **Textil** y **Pesquera**.
+
+---
+
+### Modelo de Aprendizaje Automático aplicado
+
+Se construyó un modelo supervisado de regresión estructurado en tres fases:
+
+1. **Fase 1:** Modelos lineales y regularizados (Ridge, Lasso, ElasticNet).
+2. **Fase 2:** Modelos no lineales (Árboles de decisión, Random Forest, KNN).
+3. **Fase 3:** Validación cruzada (5-fold) para evaluar estabilidad y robustez.
+
+---
+
+### Modelos finales seleccionados
+
+- **Modelo Ridge (conjunto en unidades):**  
+  - Sectores: Confeccionista y Electrónica.  
+  - Variables: empleados, establecimientos, año, dummy sector.  
+  - Mejor desempeño general en test (R² = 0.918) y validación cruzada.
+
+- **Modelo ElasticNet (conjunto en kilogramos):**  
+  - Sectores: Textil y Pesquera.  
+  - Variables: empleados, establecimientos, año, dummy sector.  
+  - R² en test = 0.688. Mejor balance entre precisión y estabilidad en CV.
+
+---
+
+## Comparación Final de Modelos
+
+Se resumen aquí los modelos seleccionados para cada sector y conjunto combinado. Los modelos generales fueron seleccionados para el análisis final por su mejor rendimiento en precisión y estabilidad, evaluados tanto por test como por validación cruzada.
+
+| Sector / Conjunto      | Modelo Final     | R² (mejor test) | R² promedio (CV) | Comentario                                                   |
+| ---------------------- | ---------------- | --------------- | ---------------- | ------------------------------------------------------------ |
+| **Pesquera**           | ElasticNet       | 0.204           | -0.190           | Único modelo con R² positivo; resto con mal desempeño        |
+| **Textil**             | Ridge Regression | 0.673           | -1.475           | Mejor R² en test; validación cruzada no favorable en general |
+| **Electrónica**        | Ridge Regression | 0.642           | 0.547            | Mejor modelo y más estable en CV                             |
+| **Confeccionista**     | ElasticNet       | 0.076           | 0.034            | Mejor entre todos los pobres resultados                      |
+| **General Unidades**   | Ridge Regression | 0.918           | 0.872            | Mejor balance entre precisión y estabilidad                  |
+| **General Kilogramos** | ElasticNet       | 0.688           | 0.317            | Único modelo robusto en CV                                   |
+
+---
+
+### Evaluación sobre test
+
+Para cada modelo final se mostró:
+
+- Comparación entre producción real y predicha.
+- Histograma de errores residuales.
+- Gráfico de residuos vs valores predichos.
+- Curvas de evolución mensual (producción real vs modelo).
+
+Sectores destacados:
+
+- **Electrónica:** modelo Ridge general predice con alta precisión, bajo error y buena forma.
+- **Pesquera:** modelo ElasticNet muestra alineamiento consistente con los datos reales.
+
+---
+
+### Predicción sobre datos reales sin producción
+
+Se aplicaron ambos modelos sobre el conjunto `df_test`, que contiene datos de 2001–2012 sin información de producción.
+
+- El modelo Ridge predice valores razonables y estables para Confeccionista y Electrónica.
+- El modelo ElasticNet muestra un comportamiento diferenciado entre Textil (alta y estable) y Pesquera (más oscilante, pero coherente).
+
+Este paso permite validar el modelo como herramienta útil para simular datos históricos o proyectar información faltante.
+
+---
+
+### Conclusiones finales
+
+- Es posible predecir la producción mensual por sector industrial utilizando solo variables estructurales básicas (empleo, establecimientos y año).
+- Los modelos generales con variables categóricas (dummy) permiten capturar diferencias sectoriales sin perder estabilidad.
+- Se identificaron sectores más sensibles a cambios estructurales (Electrónica y Textil).
+- El enfoque aplicado permite automatizar simulaciones históricas y mejorar la planificación basada en datos.
+
+---
+
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
