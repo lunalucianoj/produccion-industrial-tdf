@@ -263,7 +263,7 @@ Este paso permite validar el modelo como herramienta útil para simular datos hi
 
 ---
 
-
+Video de la presentacion: https://drive.google.com/file/d/1mJ7Z6DJiWXOG1Dt-Qofn9I6lF5zAXLNi/view?usp=sharing
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
