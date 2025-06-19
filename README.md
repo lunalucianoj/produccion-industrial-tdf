@@ -264,6 +264,10 @@ Este paso permite validar el modelo como herramienta útil para simular datos hi
 ---
 
 Video de la presentacion: https://drive.google.com/file/d/1mJ7Z6DJiWXOG1Dt-Qofn9I6lF5zAXLNi/view?usp=sharing
+Video v2: https://drive.google.com/file/d/1AtPa3-AmeWu9ryD6q7B92KL3ENhYQXC6/view?usp=sharing
+
+Aclaro que para que no sea tan extenso el video me tome el atrevimiento de acelerar la velocidad del mismo, luego de varios intentos no pude reducir mas la duracion ya que sino no abarcaba todos los aspectos.
+Disculpen las molestias, muchas gracias.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
